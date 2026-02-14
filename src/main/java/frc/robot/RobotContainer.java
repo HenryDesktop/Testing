@@ -9,7 +9,8 @@ import frc.robot.commands.Autos;
 import frc.robot.commands.ComArmDown;
 import frc.robot.commands.ComArmUp;
 import frc.robot.commands.ComFeed;
-import frc.robot.commands.ComMoveFuels;
+import frc.robot.commands.ComMoveFuelsB;
+import frc.robot.commands.ComMoveFuelsF;
 import frc.robot.commands.ComRecolectBalls;
 import frc.robot.commands.ComShoot;
 import frc.robot.commands.ComShotNOPID;
@@ -56,12 +57,11 @@ public class RobotContainer {
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
      m_driverController.rightBumper().whileTrue(new ComShoot());
-    m_driverController.b().whileTrue(new ComFeed());
-    m_driverController.y().whileTrue(new ComMoveFuels());
+    m_driverController.y().whileTrue(new ComFeed());
     m_driverController.leftBumper().whileTrue(new ComShotNOPID());
-    m_driverController.a().whileTrue(new ComArmUp());
-    m_driverController.x().whileTrue(new ComArmDown());
-    m_driverController.back().whileTrue(new ComRecolectBalls());
+    m_driverController.a().whileTrue(new ComMoveFuelsB());
+    m_driverController.x().whileTrue(new ComMoveFuelsF());
+    m_driverController.b().whileTrue(new ComRecolectBalls());
   }
 
   /**

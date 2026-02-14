@@ -53,7 +53,7 @@ public class SubIntake extends SubsystemBase {
   // }
 
   public void Feed(){
-    m_IntakeM1.set(.6);
+    m_IntakeM1.set(.8);
   }
   public void armDown(){
     m_IntakeM2.set(-.2);

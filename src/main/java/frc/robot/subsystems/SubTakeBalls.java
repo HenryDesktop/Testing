@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.MechanismConstants;
 
 public class SubTakeBalls extends SubsystemBase {
+  
     private SparkMax m_ballsIntake;
     private SparkMaxConfig m_ballsIntakeConfig;
       private static SubTakeBalls instance;

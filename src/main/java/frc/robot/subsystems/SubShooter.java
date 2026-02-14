@@ -81,8 +81,8 @@ public class SubShooter extends SubsystemBase {
 
   public void Shoot(double vel){
 
-    m_shooter1.set(0.8);
-    m_shooter2.set(0.8);
+    m_shooter1.set(0.9);
+    m_shooter2.set(0.9);
   }
   
 

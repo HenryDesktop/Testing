@@ -5,6 +5,7 @@ import com.revrobotics.ResetMode;
 import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 import com.revrobotics.spark.config.SparkMaxConfig;
+import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.MechanismConstants;
@@ -22,7 +23,7 @@ public class SubIndex extends SubsystemBase {
     m_beltConfig = new SparkMaxConfig();
     
 
-    m_beltConfig.smartCurrentLimit(40);
+    m_beltConfig.smartCurrentLimit(40).idleMode(IdleMode.kBrake);
 
     m_belt.configure(m_beltConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
  }
@@ -34,9 +35,11 @@ public class SubIndex extends SubsystemBase {
     return m_subIndex;
   }
 
-  public void moveFuels(){
-
-    m_belt.set(-0.5);
+  public void moveFuelsF(){
+    m_belt.set(-.7);
+  }
+  public void moveFuelsB(){
+    m_belt.set(0);;
   }
 
   public void stop(){
