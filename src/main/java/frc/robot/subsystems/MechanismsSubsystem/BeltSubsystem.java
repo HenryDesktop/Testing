@@ -7,6 +7,7 @@ import com.revrobotics.spark.SparkLowLevel.MotorType;
 import com.revrobotics.spark.config.SparkMaxConfig;
 import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.MechanismConstants;
 
@@ -36,7 +37,7 @@ public class SubIndex extends SubsystemBase {
   }
 
   public void moveFuelsF(){
-    m_belt.set(-.7);
+    m_belt.set(.7);
   }
   public void moveFuelsB(){
     m_belt.set(0);;
@@ -49,6 +50,10 @@ public class SubIndex extends SubsystemBase {
 
   @Override
   public void periodic() {
+
+    SmartDashboard.putNumber("Motor Ampers", m_belt.getAppliedOutput());
+    SmartDashboard.putNumber("Pico", m_belt.getBusVoltage());
+
 
   }
 }

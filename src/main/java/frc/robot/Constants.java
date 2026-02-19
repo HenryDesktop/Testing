@@ -19,12 +19,12 @@ public final class Constants {
   }
    public static class MechanismConstants{
 
-    public static final int kBeltID = 4;
-    public static final int kIntakeID = 2;
-    public static final int kArmID = 10;
-    public static final int kBallsID = 3;
+    public static final int kBeltID = 3;
+    public static final int kIntakeID = 6;
+    public static final int kArmID = 2;
+    public static final int kBallsID = 5;
     public static final int kShootmotor1 = 1; //9
-    public static final int kShootmotor2 = 5; //10
+    public static final int kShootmotor2 = 10; //10
 
     public static final double kP = 0.001; 
     public static final double kI = 0.00020; //0.00019
